@@ -21,10 +21,11 @@ const SingleProductPage = async ({ params }: Props) => {
       <ProductImage product={product} />
       <div className="flex flex-col gap-2 max-w-sm">
         <div>
+        <Title className="text-2xl">{product?.title}</Title>
           <p className="text-sm capitalize text-lightText font-semibold">
             {product?.category}
           </p>
-          <Title className="text-2xl">{product?.title}</Title>
+       
         </div>
         <div>
           {product?.availabilityStatus && (
@@ -32,6 +33,9 @@ const SingleProductPage = async ({ params }: Props) => {
               In Stock
             </span>
           )}
+        </div>
+        <div>
+      <h1>${product?.price}</h1>
         </div>
         <p className="text-sm tracking-wide max-w-sm">{product?.description}</p>
         <AddToCartButton product={product} className="justify-start gap-5 " />

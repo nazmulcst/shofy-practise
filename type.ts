@@ -1,4 +1,5 @@
 export interface ProductType {
+  brand: ReactNode;
   availabilityStatus: string;
   category: string;
   description: string;
